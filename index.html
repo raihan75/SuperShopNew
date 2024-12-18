@@ -1,0 +1,834 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Shop</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css">
+
+
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+
+    <style>
+        .navbar {
+            background: #fff;
+            padding-top: 0;
+            padding-bottom: 0;
+            box-shadow: 1px 3px 4px 0 #adadad33;
+        }
+
+        .navbar-light .navbar-brand {
+            color: #2196f3;
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            color: #1ebdc2;
+        }
+
+        .navbar-light .navbar-brand:focus,
+        .navbar-light .navbar-brand:hover {
+            color: #1ebdc2;
+        }
+
+        .navbar-light .navbar-nav .nav-link:focus,
+        .navbar-light .navbar-nav .nav-link:hover {
+            color: #fff;
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            padding-top: 22px;
+            padding-bottom: 22px;
+            transition: 0.3s;
+            padding-left: 24px;
+            padding-right: 24px;
+            font-size: 14px;
+        }
+
+        .navbar-light .navbar-nav .nav-link:focus,
+        .navbar-light .navbar-nav .nav-link:hover {
+            background: #1ebdc2;
+            transition: 0.3s;
+        }
+
+        .dropdown-item:focus,
+        .dropdown-item:hover {
+            color: #fff;
+            text-decoration: none;
+            background-color: #1ebdc2 !important;
+        }
+
+        .sm-menu {
+            border-radius: 0px;
+            border: 0px;
+            top: 97%;
+            box-shadow: rgba(173, 173, 173, 0.2) 1px 3px 4px 0px;
+        }
+
+        .dropdown-item {
+            color: #3c3c3c;
+            font-size: 14px;
+        }
+
+        .dropdown-item.active,
+        .dropdown-item:active {
+            color: #fff;
+            text-decoration: none;
+            background-color: #2196f3;
+        }
+
+        .navbar-toggler {
+            outline: none !important;
+        }
+
+        .navbar-tog {
+            color: #1ebdc2;
+        }
+
+        .megamenu-li {
+            position: static;
+        }
+
+        .megamenu {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            right: 0;
+            padding: 15px;
+        }
+
+        .megamenu h6 {
+            margin-left: 21px;
+        }
+
+        .megamenu i {
+            width: 20px;
+        }
+
+        .jssorl-009-spin img {
+            animation-name: jssorl-009-spin;
+            animation-duration: 1.6s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes jssorl-009-spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .jssorb031 {
+            position: absolute;
+        }
+
+        .jssorb031 .i {
+            position: absolute;
+            cursor: pointer;
+        }
+
+        .jssorb031 .i .b {
+            fill: #000;
+            fill-opacity: 0.5;
+            stroke: #fff;
+            stroke-width: 1200;
+            stroke-miterlimit: 10;
+            stroke-opacity: 0.3;
+        }
+
+        .jssorb031 .i:hover .b {
+            fill: #fff;
+            fill-opacity: .7;
+            stroke: #000;
+            stroke-opacity: .5;
+        }
+
+        .jssorb031 .iav .b {
+            fill: #fff;
+            stroke: #000;
+            fill-opacity: 1;
+        }
+
+        .jssorb031 .i.idn {
+            opacity: .3;
+        }
+
+        .jssora051 {
+            display: block;
+            position: absolute;
+            cursor: pointer;
+        }
+
+        .jssora051 .a {
+            fill: none;
+            stroke: #fff;
+            stroke-width: 360;
+            stroke-miterlimit: 10;
+        }
+
+        .jssora051:hover {
+            opacity: .8;
+        }
+
+        .jssora051.jssora051dn {
+            opacity: .5;
+        }
+
+        .jssora051.jssora051ds {
+            opacity: .3;
+            pointer-events: none;
+        }
+
+
+
+
+
+
+
+
+        .card-slider {
+            margin-top: 50px;
+        }
+
+        .card-slider .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-slider .card {
+            width: 100%;
+            max-width: 350px;
+            margin: 0 15px;
+        }
+
+        @media (max-width: 768px) {
+            .card-slider .card {
+                max-width: 90%;
+                margin: 0 auto;
+            }
+
+            .card-slider .swiper-slide {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .card-slider .swiper-wrapper {
+                margin: 0 10px;
+            }
+        }
+
+
+
+
+
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        ul {
+            list-style: none;
+
+        }
+
+        .footer {
+            background-color: #24262b;
+            padding: 70px 0;
+        }
+
+        .footer-col {
+            width: 25%;
+            padding: 0 15px;
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 35px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .footer-col h4::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            background-color: #e91e63;
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+
+        .footer-col ul li:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: #ffffff;
+            padding-left: 8px;
+        }
+
+        .footer-col .social-links a {
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: rgba(255, 255, 255, 0.2);
+            margin: 0 10px 10px 0;
+            text-align: center;
+            line-height: 40px !important;
+            border-radius: 50%;
+            color: #ffffff;
+            transition: all 0.5s ease;
+        }
+
+        .footer-col .social-links a:hover {
+            color: #24262b;
+            background-color: #ffffff;
+        }
+
+        /*responsive*/
+        @media(max-width: 767px) {
+            .footer-col {
+                width: 50%;
+                margin-bottom: 30px;
+            }
+        }
+
+        @media(max-width: 574px) {
+            .footer-col {
+                width: 100%;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Mega Menu</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile_nav"
+                aria-controls="mobile_nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mobile_nav">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0 float-md-right">
+                </ul>
+                <ul class="navbar-nav navbar-light">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                    <li class="nav-item dmenu dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Services
+                        </a>
+                        <div class="dropdown-menu sm-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Software Development</a>
+                            <a class="dropdown-item" href="#">Web Designing & Development</a>
+                            <a class="dropdown-item" href="#">Mobile Application</a>
+                            <a class="dropdown-item" href="#">Business Solutions & Business Process</a>
+                            <a class="dropdown-item" href="#">Digital Marketing & SEO Services</a>
+                            <a class="dropdown-item" href="#">Web Hosting & Maintenance</a>
+                            <a class="dropdown-item" href="#">Cyber Security</a>
+                            <a class="dropdown-item" href="#">Block Chain Implementation</a>
+                            <a class="dropdown-item" href="#">Big Data</a>
+                        </div>
+                    </li>
+                    <!--========-->
+                    <li class="nav-item dropdown megamenu-li dmenu">
+                        <a class="nav-link dropdown-toggle" href="" id="dropdown01" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">All Services</a>
+                        <div class="dropdown-menu megamenu sm-menu border-top" aria-labelledby="dropdown01">
+                            <div class="row">
+                                <div class="col-sm-6 col-lg-3 border-right mb-4">
+                                    <h6>Ecommerce</h6>
+                                    <a class="dropdown-item" href="#"><i class="fab fa-magento"></i> Magento
+                                        Development</a>
+                                    <a class="dropdown-item" href="#"><i class="fab fa-magento"></i> Magento 2
+                                        Migration</a>
+                                    <a class="dropdown-item" href="#"><i class="fab fa-magento"></i> Odoo ERP</a>
+                                    <a class="dropdown-item" href="#"><i class="fab fa-magento"></i> Mobile Commerce</a>
+                                    <a class="dropdown-item" href="#"><i class="fab fa-magento"></i> CRM for
+                                        Commerce</a>
+                                </div>
+                                <div class="col-sm-6 col-lg-3 border-right mb-4">
+                                    <h6>LAMP Technology</h6>
+                                    <a class="dropdown-item" href="#"><i class="fab fa-php"></i> PHP Website
+                                        Development</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-circle"></i> Phalcon
+                                        Development</a>
+                                    <a class="dropdown-item" href="#"><i class="fab fa-laravel"></i> Laravel
+                                        Development</a>
+                                    <a class="dropdown-item" href="#"><i class="fab fa-wordpress-simple"></i> WordPress
+                                        Development</a>
+                                    <a class="dropdown-item" href="#"><i class="fab fa-php"></i> Symfony Development</a>
+                                </div>
+                                <div class="col-sm-6 col-lg-3 border-right mb-4">
+                                    <h6>Mobile</h6>
+                                    <a class="dropdown-item" href="#"><i class="fab fa-apple"></i> iPhone App
+                                        Development</a>
+                                    <a class="dropdown-item" href="#"><i class="fab fa-android"></i> Android App
+                                        Development</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-mobile-alt"></i> Phone Gap App
+                                        Development</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-tablet-alt"></i> Hybrid App
+                                        Development</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-mobile-alt"></i> Ionic
+                                        Development</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-tablet-alt"></i> React Native
+                                        Development</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-mobile-alt"></i> Xamarin App
+                                        Development</a>
+                                </div>
+                                <div class="col-sm-6 col-lg-3 mb-4">
+                                    <h6>Node.js & MongoDB</h6>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-cubes"></i> Full Stack
+                                        Development</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-cube"></i> MEAN Stack</a>
+                                    <a class="dropdown-item" href="#"><i class="fab fa-angular"></i> AngularJS</a>
+                                    <a class="dropdown-item" href="#"><i class="fab fa-node-js"></i> Node.JS
+                                        Development</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-leaf fa-rotate-90"></i> MongoDB
+                                        Development</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6 col-lg-3 border-right mb-4">
+                                    <h6>Microsoft Technology</h6>
+                                    <a class="dropdown-item" href="#"><i class="fab fa-windows"></i> Microsoft App
+                                        Development</a>
+                                    <a class="dropdown-item" href="#"><i class="fab fa-windows"></i> MS Desktop App
+                                        Development</a>
+                                    <a class="dropdown-item" href="#"><i class="fab fa-windows"></i> SharePoint
+                                        Development</a>
+                                    <a class="dropdown-item" href="#"><i class="fab fa-windows"></i> ASP.NET
+                                        Development</a>
+                                    <a class="dropdown-item" href="#"><i class="fab fa-windows"></i> CMS Development</a>
+                                </div>
+                                <div class="col-sm-6 col-lg-3 border-right mb-4">
+                                    <h6>Cloud Services</h6>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-cloud"></i> DevOps</a>
+                                    <a class="dropdown-item" href="#"><i class="fab fa-amazon"></i> Amazon Web
+                                        Services</a>
+                                    <a class="dropdown-item" href="#"><i class="fab fa-windows"></i> Azure Cloud
+                                        Service</a>
+                                    <a class="dropdown-item" href="#"><i class="fab fa-google"></i> Google App Engine
+                                        Services</a>
+                                </div>
+                                <div class="col-sm-6 col-lg-3 border-right mb-4">
+                                    <h6>Enterprise Services</h6>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-laptop"></i> Augmented
+                                        Reality</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-laptop"></i> CRM</a>
+                                    <a class="dropdown-item" href="#"><i class="fab fa-buromobelexperte"></i> Enterprise
+                                        Mobility Services</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-th-large"></i> Blockchain
+                                        Services</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-briefcase"></i> Business
+                                        Intelligence</a>
+                                </div>
+                                <div class="col-sm-6 col-lg-3 mb-4">
+                                    <h6>Digital Marketing</h6>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-laptop"></i> Digital
+                                        Marketing</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-laptop"></i> PPC Management
+                                        Services</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-laptop"></i> E-commerce SEO
+                                        Services</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-laptop"></i> Conversion Rate
+                                        Optimization</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!--=========-->
+                    <li class="nav-item"><a class="nav-link" href="<?php echo siteURL;?>portfolio.php">Portfolio</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="<?php echo siteURL;?>career.php">Careers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?php echo siteURL;?>contact-us.php">Contact us</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <section class="wow fadeIn example no-padding no-transition slider-top">
+        <div style="min-height: 50px;">
+            <!-- Jssor Slider Begin -->
+
+
+            <div id="slider1_container" style="visibility: hidden; position: relative; margin: 0 auto;
+        top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
+                <!-- Loading Screen -->
+                <div data-u="loading" class="jssorl-009-spin"
+                    style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+                    <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;"
+                        src="https://www.jssor.com/theme/svg/loading/static-svg/spin.svg" />
+                </div>
+
+                <!-- Slides Container -->
+                <div data-u="slides"
+                    style="position: absolute; left: 0px; top: 0px; width: 1300px; height: 500px; overflow: hidden;">
+                    <div>
+                        <img data-u="image" src="https://images.pexels.com/photos/414191/pexels-photo-414191.jpeg"
+                            class="slider" />
+                    </div>
+                    <div>
+                        <img data-u="image" src="https://images.pexels.com/photos/243415/pexels-photo-243415.jpeg"
+                            class="slider" />
+                    </div>
+                    <div>
+                        <img data-u="image" src="https://images.pexels.com/photos/350749/pexels-photo-350749.jpeg"
+                            class="slider" />
+                    </div>
+                </div>
+
+                <!--#region Bullet Navigator Skin Begin -->
+                <!-- Help: https://www.jssor.com/development/slider-with-bullet-navigator.html -->
+                <style>
+
+                </style>
+                <div data-u="navigator" class="jssorb031" style="position:absolute;bottom:12px;right:12px;"
+                    data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+                    <div data-u="prototype" class="i" style="width:16px;height:16px;">
+                        <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                            <circle class="b" cx="8000" cy="8000" r="5800"></circle>
+                        </svg>
+                    </div>
+                </div>
+                <!--#endregion Bullet Navigator Skin End -->
+
+                <!--#region Arrow Navigator Skin Begin -->
+                <!-- Help: https://www.jssor.com/development/slider-with-arrow-navigator.html -->
+                <style>
+
+                </style>
+                <div data-u="arrowleft" class="jssora051" style="width:55px;height:55px;top:0px;left:25px;"
+                    data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+                    <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                        <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+                    </svg>
+                </div>
+                <div data-u="arrowright" class="jssora051" style="width:55px;height:55px;top:0px;right:25px;"
+                    data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+                    <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                        <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
+                    </svg>
+                </div>
+                <!--#endregion Arrow Navigator Skin End -->
+            </div>
+            <!-- Jssor Slider End -->
+        </div>
+    </section>
+
+
+
+
+    <section class="card-slider">
+        <div class="container">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title 1</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title 2</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title 3</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title 4</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title 5</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title 6</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul style="padding-left: 0;">
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul style="padding-left: 0;">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>online shop</h4>
+                    <ul style="padding-left: 0;">
+                        <li><a href="#">watch</a></li>
+                        <li><a href="#">bag</a></li>
+                        <li><a href="#">shoes</a></li>
+                        <li><a href="#">dress</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i style="line-height: 40px;" class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i style="line-height: 40px;" class="fab fa-twitter"></i></a>
+                        <a href="#"><i style="line-height: 40px;" class="fab fa-instagram"></i></a>
+                        <a href="#"><i style="line-height: 40px;" class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.js"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jssor-slider/27.1.0/jssor.slider.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<script>
+
+
+
+
+    jQuery(document).ready(function ($) {
+
+
+
+        var options = {
+            $FillMode: 2,                                       //[Optional] The way to fill image in slide, 0 stretch, 1 contain (keep aspect ratio and put all inside slide), 2 cover (keep aspect ratio and cover whole slide), 4 actual size, 5 contain for large image, actual size for small image, default value is 0
+            $AutoPlay: 1,                                       //[Optional] Auto play or not, to enable slideshow, this option must be set to greater than 0. Default value is 0. 0: no auto play, 1: continuously, 2: stop at last slide, 4: stop on click, 8: stop on user navigation (by arrow/bullet/thumbnail/drag/arrow key navigation)
+            $Idle: 4000,                                        //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+            $PauseOnHover: 1,                                   //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
+
+            $ArrowKeyNavigation: 1,   			                //[Optional] Steps to go for each navigation request by pressing arrow key, default value is 1.
+            $SlideEasing: $Jease$.$OutQuint,                    //[Optional] Specifies easing for right to left animation, default value is $Jease$.$OutQuad
+            $SlideDuration: 800,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+            $MinDragOffsetToSlide: 20,                          //[Optional] Minimum drag offset to trigger slide, default value is 20
+            //$SlideWidth: 600,                                 //[Optional] Width of every slide in pixels, default value is width of 'slides' container
+            //$SlideHeight: 300,                                //[Optional] Height of every slide in pixels, default value is height of 'slides' container
+            $SlideSpacing: 0, 					                //[Optional] Space between each slide in pixels, default value is 0
+            $UISearchMode: 1,                                   //[Optional] The way (0 parellel, 1 recursive, default value is 1) to search UI components (slides container, loading screen, navigator container, arrow navigator container, thumbnail navigator container etc).
+            $PlayOrientation: 1,                                //[Optional] Orientation to play slide (for auto play, navigation), 1 horizental, 2 vertical, 5 horizental reverse, 6 vertical reverse, default value is 1
+            $DragOrientation: 1,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $Cols is greater than 1, or parking position is not 0)
+
+            $BulletNavigatorOptions: {                          //[Optional] Options to specify and enable navigator or not
+                $Class: $JssorBulletNavigator$,                 //[Required] Class to create navigator instance
+                $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+                $SpacingX: 8,                                   //[Optional] Horizontal space between each item in pixel, default value is 0
+                $Orientation: 1                                //[Optional] The orientation of the navigator, 1 horizontal, 2 vertical, default value is 1
+            },
+
+            $ArrowNavigatorOptions: {                           //[Optional] Options to specify and enable arrow navigator or not
+                $Class: $JssorArrowNavigator$,                  //[Requried] Class to create arrow navigator instance
+                $ChanceToShow: 2                                 //[Optional] Steps to go for each navigation request, default value is 1
+            }
+        };
+
+        var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+
+        //responsive code begin
+        //you can remove responsive code if you don't want the slider scales while window resizing
+        function ScaleSlider() {
+            var bodyWidth = document.body.clientWidth;
+            if (bodyWidth)
+                jssor_slider1.$ScaleWidth(Math.min(bodyWidth, 1920));
+            else
+                window.setTimeout(ScaleSlider, 30);
+        }
+        ScaleSlider();
+
+        $(window).bind("load", ScaleSlider);
+        $(window).bind("resize", ScaleSlider);
+        $(window).bind("orientationchange", ScaleSlider);
+        //responsive code end
+    });
+
+    $(document).ready(function () {
+        $(".navbar-light .dmenu").hover(
+            function () {
+                $(this).find(".sm-menu").first().stop(true, true).slideDown(150);
+            },
+            function () {
+                $(this).find(".sm-menu").first().stop(true, true).slideUp(105);
+            }
+        );
+    });
+
+    $(document).ready(function () {
+        $(".megamenu").on("click", function (e) {
+            e.stopPropagation();
+        });
+    });
+
+
+    var swiper = new Swiper(".card-slider .swiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 20
+            },
+            // when window width is >= 480px
+            480: {
+                slidesPerView: 1,
+                spaceBetween: 30
+            },
+            // when window width is >= 640px
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 40
+            },
+            // when window width is >= 992px
+            992: {
+                slidesPerView: 3,
+                spaceBetween: 50
+            }
+        }
+    });
+
+</script>
+
+</html>
