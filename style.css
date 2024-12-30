@@ -644,3 +644,24 @@ padding-bottom:50px;
   height: 35px;
 }
 /* ------testimonial  close-------*/
+
+/* Banner Style */
+.Bannar{
+  height: 200px; 
+  background-color: #0a0a0a;
+}
+
+.BannerElement{
+  justify-content: space-between; 
+  display: flex;
+}
+
+.LogoDiv{
+  justify-content: space-between;
+  display: flex;
+}
+
+.LogoDiv img{
+  height: 80px;
+  width: 180px;
+}
